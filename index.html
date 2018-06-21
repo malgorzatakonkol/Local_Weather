@@ -10,10 +10,21 @@
 <div id="container">
     <div class="info">
         <h1>Pogodynka</h1>
-        <h2>Sprawdź jaka jest pogoda</h2>
-        <input><button>szukaj</button>
+        <h2>Sprawdź pogodę w wybranym przez siebie miejscu</h2>
+        <form class="find_city">
+            <label>SZUKAJ MIASTA:
+            <input type="text" value="miasto" class="get_name">
+            </label>
+            <input type="submit" id="show_city" value="Szukaj">
+        </form>
     </div>
-    <div class="description">3</div>
+
+    <div class="description">
+        <div class="image"></div>
+        <div class="temperature"></div>
+        <div class="date"></div>
+        <div class="country"></div>
+    </div>
 </div>
 
 </body>
