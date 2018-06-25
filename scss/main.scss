@@ -2,85 +2,101 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: blue;
+  //background-color: blue;
   font-family: 'Rajdhani', sans-serif;
 }
 
-
-
 #container {
+
   position: relative;
   max-width: 1450px;
   height: 100vh;
   margin: 0 auto;
-  padding: 0;
-  background-color: yellow;
   display: flex;
+  @media (max-width: 871px) {
+    flex-direction: column;
+  }
+
   .info {
     width: 50%;
     height: 100%;
     background-color: chocolate;
+    position: relative;
+    @media (max-width: 871px) {
+      width: 100%;
+    }
     h1 {
       font-size: 60px;
       position: absolute;
-      text-align: center;
       top: 20%;
-      left: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      margin: 0;
     }
     h2 {
       font-size: 30px;
       position: absolute;
-      text-align: center;
       top: 40%;
-      left: 2%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      margin: 0;
+      text-align: center;
     }
     .find_city {
       position: absolute;
       top: 50%;
-      left: 2%;
+      left: 30%;
+      input {
+        height: 4vh;
+        width: 80%;
+        border-radius: 4px;
+        margin-bottom: 5px;
+      }
+      input:focus {
+        outline: none;
+        border-color: #46b8da;
+        box-shadow: 0 0 12px #719ECE;
+      }
     }
   }
+
   .description {
     width: 50%;
     height: 100%;
     background-color: lightgreen;
     position: relative;
+    @media (max-width: 871px) {
+      width: 100%;
+    }
     .des {
+      padding: 0;
+      margin: 0;
       list-style-type: none;
       font-size: 30px;
       position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      //position: absolute;
-      top: 50%;
-      left: 35%;
+
     }
     .weatherIcon {
       width: 400px;
       height: 400px;
+      padding: 0;
+      margin: 0;
+      left: 50%;
+      top:20%;
       background-size: cover;
       position: absolute;
-      //top: 50%;
-      left: 26%;
+      transform: translate(-50%, -50%);
     }
 
   }
 }
 
-@media screen and (max-width: 871px) {
-  body{
-    height: 0;
-  }
-  #container {
-    flex-direction: column;
-    .info, .description {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
 
 
 
