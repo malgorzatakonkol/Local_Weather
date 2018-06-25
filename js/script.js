@@ -58,10 +58,10 @@ $(function () {
         var newLi4 = $("<div>");
         newLi4.text(maxTemp);
 
-        newLi.append(newLi1);
-        newLi.append(newLi2);
-        newLi.append(newLi3);
-        newLi.append(newLi4);
+        newLi.append("Lokalizacja: ", newLi1);
+        newLi.append("Temperatura [<sup>o</sup>C]: ", newLi2);
+        newLi.append("Temperatura min [<sup>o</sup>C]: ", newLi3);
+        newLi.append("Temperatura max [<sup>o</sup>C]: ", newLi4);
 
         ulElement.append(newLi);
 

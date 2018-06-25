@@ -6,9 +6,11 @@
 
 body {
   background-color: blue;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 #container {
+  position: relative;
   max-width: 1450px;
   height: 100vh;
   margin: 0 auto;
@@ -16,14 +18,52 @@ body {
   background-color: yellow;
   display: flex;
   .info {
-    max-width: 40%;
+    width: 50%;
     height: 100%;
     background-color: chocolate;
+    h1 {
+      font-size: 60px;
+      position: absolute;
+      text-align: center;
+      top: 20%;
+      left: 10%;
+    }
+    h2 {
+      font-size: 30px;
+      position: absolute;
+      text-align: center;
+      top: 40%;
+      left: 2%;
+    }
+    .find_city {
+      position: absolute;
+      top: 50%;
+      left: 2%;
+    }
   }
   .description {
-    max-width: 60%;
+    width: 50%;
     height: 100%;
     background-color: lightgreen;
+    position: relative;
+    .des {
+      list-style-type: none;
+      font-size: 30px;
+      position: absolute;
+      text-align: center;
+      //position: absolute;
+      top: 50%;
+      left: 35%;
+    }
+    .weatherIcon {
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      position: absolute;
+      //top: 50%;
+      left: 26%;
+    }
+
   }
 }
 
