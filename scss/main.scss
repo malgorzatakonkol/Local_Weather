@@ -18,7 +18,7 @@
 }
 
 @mixin mobile3() { //dla innej rozdzielczości
-  @media (max-width: 250px) {
+  @media screen and (max-width: 250px) and (max-height: 700px) {
     @content;
   }
 }
@@ -93,11 +93,27 @@
         border-radius: 4px;
         margin-bottom: 5px;
       }
+
+      #show_city {
+        font-size: 0.8em;
+        background-color: #6699CC;
+        border-color: orangered;
+        padding: 5px 5px;
+        line-height: 1.42857143;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        align-content: center;
+      }
+
       input:focus {
         outline: none;
-        border-color: #46b8da;
-        box-shadow: 0 0 12px #719ECE;
+        border-color: orange;
+        box-shadow: 0 0 12px orangered;
       }
+
+
+
 
       @include mobile(){
         top: 75%;
