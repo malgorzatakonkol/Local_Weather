@@ -29,7 +29,6 @@ body {
   }
 }
 
-
 #container {
   position: relative;
   width: 100%;
@@ -60,10 +59,9 @@ body {
       @extend %position;
       @extend %lighter-font;
       color: $accent-color;
-      text-shadow:
-              2px 1px 10px rgb(204, 204, 204), 0 0 0 rgb(55,55,55);
+      text-shadow: 2px 1px 10px rgb(204, 204, 204), 0 0 0 rgb(55, 55, 55);
 
-      @include mobile(){
+      @include mobile() {
         font-size: 40px;
       }
     }
@@ -76,13 +74,13 @@ body {
       @extend %lighter-font;
       @extend %article-color;
 
-      @include mobile(){
+      @include mobile() {
         font-size: 25px;
         top: 50%;
         font-weight: lighter;
       }
 
-      @include mobile2(){
+      @include mobile2() {
         font-size: 20px;
         font-weight: lighter;
       }
@@ -122,7 +120,7 @@ body {
         box-shadow: 0 0 12px $focus-color;
       }
 
-      @include mobile(){
+      @include mobile() {
         top: 75%;
         left: 25%;
       }
@@ -152,14 +150,14 @@ body {
       line-height: 1.5;
       @extend %lighter-font;
 
-      @include mobile(){
+      @include mobile() {
         font-size: 20px;
         top: 65%;
         line-height: 1;
         font-weight: bolder;
       }
 
-      @include mobile2(){
+      @include mobile2() {
         font-size: 16px;
         top: 60%;
       }
@@ -172,19 +170,19 @@ body {
       background-size: cover;
       @extend %position;
 
-      @include mobile(){
+      @include mobile() {
         width: 150px;
         height: 150px;
         top: -25%;
       }
 
-      @include mobile2(){
+      @include mobile2() {
         width: 100px;
         height: 100px;
-        top:-10%;
+        top: -10%;
       }
 
-      @include mobile3(){
+      @include mobile3() {
         display: none;
       }
     }
