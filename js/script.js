@@ -1,7 +1,6 @@
 $(function () {
     console.log("DOM");
 
-    // var url = 'http://api.openweathermap.org/data/2.5/weather?q=London&appid=0792ae5427c864ed05425224de36e150';
     var ulElement = $(".des");
 
     var button = $('#show_city');
@@ -87,26 +86,15 @@ $(function () {
 
         newLi.append(newI);
         newLi.append(newLi1);
-        // newLi.append(newLi2);
         newLi.append(newLi2);
         newLi.append(newLi3);
         newLi.append(newLi4);
-        // newLi.append(newLi4);
         newLi.append(newLi5);
         newLi.append(newLi6);
         newLi.append(newLi7);
 
 
         ulElement.append(newLi);
-
-        // var urlIcon = $(".weatherIcon");
-        // var descriptionDiv = $(".description");
-        // var newIcon = $("<img>");
-        // newIcon.attr('src', 'http://openweathermap.org/img/w/' + weatherIcon + '.png');
-        // newIcon.addClass("weatherIcon");
-        // //
-        // newIcon.append(descriptionDiv);
-
 
     }
 
