@@ -59,9 +59,9 @@ body {
       top: 20%;
       @extend %position;
       @extend %lighter-font;
-      color: #0F91BC;
+      color: $accent-color;
       text-shadow:
-              2px 1px 10px rgb(204, 204, 204), 0px 0px 0px rgb(55,55,55);
+              2px 1px 10px rgb(204, 204, 204), 0 0 0 rgb(55,55,55);
 
       @include mobile(){
         font-size: 40px;
@@ -105,8 +105,8 @@ body {
 
       #show_city {
         font-size: 1em;
-        background-color: #0F91BC;
-        border-color: orangered;
+        background-color: $accent-color;
+        border-color: $focus-color;
         padding: 5px 5px;
         line-height: 1.42857143;
         cursor: pointer;
@@ -119,7 +119,7 @@ body {
       input:focus {
         outline: none;
         border-color: orange;
-        box-shadow: 0 0 12px orangered;
+        box-shadow: 0 0 12px $focus-color;
       }
 
       @include mobile(){
