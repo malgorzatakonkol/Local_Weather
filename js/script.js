@@ -58,13 +58,13 @@ $(function () {
         newLi1.text("Lokalizacja:   " + nameCity);
 
         var newLi2 = $("<div>");
-        newLi2.text(temperature);
+        newLi2.text("Temperatura: " + temperature + " °C");
 
         var newLi3 = $("<div>");
-        newLi3.text(minTemp);
+        newLi3.text("Temperatura min: " + minTemp + " °C");
 
         var newLi4 = $("<div>");
-        newLi4.text(maxTemp);
+        newLi4.text("Temperatura max: " + maxTemp + " °C");
 
 
         var newLi5 = $("<div>");
@@ -88,9 +88,9 @@ $(function () {
         newLi.append(newI);
         newLi.append(newLi1);
         // newLi.append(newLi2);
-        newLi.append("Temperatura [<sup>o</sup>C]: ", newLi2);
-        newLi.append("Temperatura min [<sup>o</sup>C]: ", newLi3);
-        newLi.append("Temperatura max [<sup>o</sup>C]: ", newLi4);
+        newLi.append(newLi2);
+        newLi.append(newLi3);
+        newLi.append(newLi4);
         // newLi.append(newLi4);
         newLi.append(newLi5);
         newLi.append(newLi6);

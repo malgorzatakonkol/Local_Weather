@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,19 +7,23 @@
   font-family: 'Rajdhani', sans-serif;
 }
 
-@mixin mobile() { //dla innej rozdzielczości
+body {
+  background-color: #f8fdf3;
+}
+
+@mixin mobile() {
   @media (max-width: 871px) {
     @content;
   }
 }
 
-@mixin mobile2() { //dla innej rozdzielczości
+@mixin mobile2() {
   @media (max-width: 400px) {
     @content;
   }
 }
 
-@mixin mobile3() { //dla innej rozdzielczości
+@mixin mobile3() {
   @media screen and (max-width: 250px) and (max-height: 700px) {
     @content;
   }
@@ -26,12 +32,14 @@
 
 #container {
   position: relative;
-  max-width: 1450px;
-  height: 100vh;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 0.35em;
+  height: 80vh;
+  margin: 20px auto;
   display: flex;
-  background-image: url("../img/clouds-dawn-dramatic-1118873.jpg");
-
+  background: linear-gradient(90deg, #d4eece, #28D9F4), url("../img/clouds-dawn-dramatic-1118873.jpg") no-repeat;
+  background-blend-mode: multiply;
   background-size: cover;
 
   @include mobile() {
@@ -41,21 +49,19 @@
   .info {
     width: 50%;
     height: 100%;
-    //background-color: chocolate;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.3);
 
     @media (max-width: 871px) {
       width: 100%;
     }
     h1 {
-      font-size: 60px;
-      position: absolute;
+      font-size: 5.8em;
       top: 20%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 0;
-      margin: 0;
+      @extend %position;
+      @extend %lighter-font;
+      color: #0F91BC;
+      text-shadow:
+              2px 1px 10px rgb(204, 204, 204), 0px 0px 0px rgb(55,55,55);
 
       @include mobile(){
         font-size: 40px;
@@ -63,14 +69,12 @@
     }
     h2 {
       font-size: 30px;
-      position: absolute;
       top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 0;
-      margin: 0;
+
+      @extend %position;
       text-align: center;
-      font-weight: lighter;
+      @extend %lighter-font;
+      @extend %article-color;
 
       @include mobile(){
         font-size: 25px;
@@ -92,11 +96,16 @@
         width: 80%;
         border-radius: 4px;
         margin-bottom: 5px;
+        border: none;
+        outline: none;
+        padding: 12px;
+        font-size: 1.15em;
+
       }
 
       #show_city {
-        font-size: 0.8em;
-        background-color: #6699CC;
+        font-size: 1em;
+        background-color: #0F91BC;
         border-color: orangered;
         padding: 5px 5px;
         line-height: 1.42857143;
@@ -104,6 +113,7 @@
         border-radius: 4px;
         border: 1px solid transparent;
         align-content: center;
+        width: 20%;
       }
 
       input:focus {
@@ -111,9 +121,6 @@
         border-color: orange;
         box-shadow: 0 0 12px orangered;
       }
-
-
-
 
       @include mobile(){
         top: 75%;
@@ -126,13 +133,12 @@
   .description {
     width: 50%;
     height: 100%;
-    //background-color: lightgreen;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.3);
     @media (max-width: 871px) {
       width: 100%;
     }
     .des {
+      @extend %article-color;
       display: inline-block;
       padding: 10px;
       margin: 0;
@@ -144,7 +150,7 @@
       transform: translate(-50%, -50%);
       text-align: center;
       line-height: 1.5;
-      font-weight: lighter;
+      @extend %lighter-font;
 
       @include mobile(){
         font-size: 20px;
@@ -156,23 +162,15 @@
       @include mobile2(){
         font-size: 16px;
         top: 60%;
-        //font-weight: bolder;
       }
 
     }
     .weatherIcon {
       width: 245px;
       height: 245px;
-      padding: 0;
-      margin: 0;
-      left: 50%;
       top: -50%;
       background-size: cover;
-      position: absolute;
-      transform: translate(-50%, -50%);
-
-
-
+      @extend %position;
 
       @include mobile(){
         width: 150px;
