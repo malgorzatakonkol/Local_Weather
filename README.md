@@ -10,5 +10,6 @@ https://malgorzatakonkol.github.io/Local_Weather/#/
 * HTML
 * Sass
 * JavaScript
+* jQuery
 * AJAX (weather forecast API)
 * Gulp
