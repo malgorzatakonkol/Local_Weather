@@ -13,7 +13,7 @@ $(function () {
 
         var newCity = firstInput.val();
         $.ajax({
-            url: 'http://api.openweathermap.org/data/2.5/weather?q=' + newCity + '&appid=0792ae5427c864ed05425224de36e150',
+            url: 'https://api.openweathermap.org/data/2.5/weather?q=' + newCity + '&appid=0792ae5427c864ed05425224de36e150',
             method: 'GET',
             datatype: 'json'
         }).done(function (response) {
