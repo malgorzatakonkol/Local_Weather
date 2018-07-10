@@ -40,6 +40,9 @@ body {
   background: linear-gradient(90deg, #d4eece, #28D9F4), url("../img/clouds-dawn-dramatic-1118873.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+  -webkit-box-shadow: 0 0 26px rgba(0,0,0, .13);
+  -moz-box-shadow: 0 0 26px rgba(0,0,0, .13);
+  box-shadow: 0 0 26px rgba(0,0,0, 1.13);
 
   @include mobile() {
     flex-direction: column;
